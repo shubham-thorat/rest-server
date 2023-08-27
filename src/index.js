@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const helper = require('./helper')
 const RedisClient = require('./redis/redisClient')
+const client = require('./statsD')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -36,6 +37,7 @@ app.post('/', (req, res) => {
   const data = req.body
   const startTime = Date.now()
   // console.log("data", data)
+  client.timing('request_received', 1)
   const payload = req.body
   let serverlogfileName = payload.serverlogfileName ?? 'output_server.log'
   RedisClient.setKey(payload.key, payload.value).then(response => {
@@ -43,6 +45,8 @@ app.post('/', (req, res) => {
     Count.increment()
     const timeRequired = endTime - startTime;
     helper.writeToFile(timeRequired, Count.getCount(), serverlogfileName)
+    client.timing('response_time', timeRequired)
+    client.timing('request_end', 1)
     res.status(200).json({
       msg: 'Redis key set success',
       TimeDiffServer: (endTime - startTime) / 1000,

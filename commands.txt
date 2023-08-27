@@ -1,0 +1,3 @@
+wrk -t1 -c1 -d300s -s scripts.lua -L http://35.154.18.223:8000
+
+wrk -c 50 -t 2 -R 50 -d 15s -s scripts/json.lua -L http://myserverip
