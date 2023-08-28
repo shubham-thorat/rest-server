@@ -33,6 +33,8 @@ app.get('/health', (req, res) => {
   })
 })
 app.get('/', (req, res) => {
+
+  console.log("GET API CALLED")
   res.status(200).json({
     "SUCCESS": "OK"
   })
