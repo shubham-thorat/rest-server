@@ -3,10 +3,13 @@ const app = express()
 const helper = require('./helper')
 const RedisClient = require('./redis/redisClient')
 const client = require('./statsD')
+const cors = require('cors')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors({
+  origin: "*"
+}))
 class Count {
   static request_count = 0;
   static setInitial() {
