@@ -25,6 +25,13 @@ const getTime = (startTime) => {
   return (Date.now() - startTime) / 1000;
 }
 
+
+app.get('/health', (req, res) => {
+  console.log("HEALTH CHECK API CALLED")
+  return res.status(200).json({
+    "SUCCESS": "OK"
+  })
+})
 app.get('/', (req, res) => {
   res.status(200).json({
     "SUCCESS": "OK"
