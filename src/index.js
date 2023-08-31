@@ -30,7 +30,7 @@ const getTime = (startTime) => {
 
 
 app.get('/health', (req, res) => {
-  console.log("HEALTH CHECK API CALLED")
+  // console.log("HEALTH CHECK API CALLED")
   return res.status(200).json({
     "SUCCESS": "OK"
   })

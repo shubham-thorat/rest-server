@@ -1,4 +1,13 @@
+
+file = string.format("key=bar&value=quux&serverlogfileName=output_server_%d_%d_%d.log",2000,300,15000)
+wrk.method = "POST"
+wrk.body   = file
+wrk.headers["Content-Type"] = "application/x-www-form-urlencoded"
+wrk.path = "/"
+
 done = function(summary, latency, requests)
+   file = io.open("./debug/output.lua", "a")
+   io.output(file)
    io.write("\nJSON Output:\n")
    io.write("{\n")
    io.write(string.format("\t\"requests\": %d,\n", summary.requests))
@@ -19,4 +28,6 @@ done = function(summary, latency, requests)
       end
    end
    io.write("\t]\n}\n")
+   io.write("#-----------------------------------------------------#")
+   io.close(file)
 end
