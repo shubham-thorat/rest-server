@@ -46,9 +46,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/', (req, res) => {
-  const data = req.body
   const startTime = Date.now()
-  // console.log("data", data)
   client.timing('request_received', 1)
   const payload = req.body
   let serverlogfileName = payload.serverlogfileName ?? 'output_server.log'
@@ -59,6 +57,7 @@ app.post('/', (req, res) => {
     helper.writeToFile(timeRequired, Count.getCount(), serverlogfileName)
     client.timing('response_time', timeRequired)
     client.timing('request_end', 1)
+    console.log('REQUEST END :', Count.getCount())
     res.status(200).json({
       msg: 'Redis key set success',
       TimeDiffServer: (endTime - startTime) / 1000,
