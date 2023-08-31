@@ -49,8 +49,7 @@ app.post('/', (req, res) => {
   const startTime = Date.now()
   client.timing('request_received', 1)
   const payload = req.body
-  const serverlogfileName = req.headers['serverlogfileName'] ?? 'output_server.log'
-  // let serverlogfileName = payload.serverlogfileName ?? 'output_server.log'
+  const serverlogfileName = req.headers['serverlogfilename'] ?? 'output_server.log'
   RedisClient.setKey(payload.key, payload.value).then(response => {
     const endTime = Date.now();
     Count.increment()
