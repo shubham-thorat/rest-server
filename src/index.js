@@ -49,7 +49,8 @@ app.post('/', (req, res) => {
   const startTime = Date.now()
   client.timing('request_received', 1)
   const payload = req.body
-  let serverlogfileName = payload.serverlogfileName ?? 'output_server.log'
+  const serverlogfileName = req.headers['serverlogfileName'] ?? 'output_server.log'
+  // let serverlogfileName = payload.serverlogfileName ?? 'output_server.log'
   RedisClient.setKey(payload.key, payload.value).then(response => {
     const endTime = Date.now();
     Count.increment()
@@ -67,6 +68,7 @@ app.post('/', (req, res) => {
 
   }).catch(error => {
     const timeRequired = getTime(startTime);
+    console.log("ERROR : ", error)
     res.status(500).json({
       msg: 'Redis key set failure',
       TimeDiffServer: `${timeRequired}s`,
