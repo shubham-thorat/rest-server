@@ -46,15 +46,20 @@ app.get('/', (req, res) => {
 
 
 app.post('/', (req, res) => {
+  // console.log("reach")
   const startTime = Date.now()
   client.timing('request_received', 1)
+  // console.log("reach2")
   const payload = req.body
   const serverlogfileName = req.headers['serverlogfilename'] ?? 'output_server.log'
+  // console.log("reach3")
   RedisClient.setKey(payload.key, payload.value).then(response => {
     const endTime = Date.now();
+    // console.log("reach4")
     Count.increment()
     const timeRequired = endTime - startTime;
     helper.writeToFile(timeRequired, Count.getCount(), serverlogfileName)
+    // console.log("reach5")
     client.timing('response_time', timeRequired)
     client.timing('request_end', 1)
     console.log('REQUEST END :', Count.getCount())

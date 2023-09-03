@@ -1,3 +1,34 @@
-wrk -t1 -c1 -d300s -s scripts.lua -L http://35.154.18.223:8000
+wrk -t1 -c1 -d300s -s scripts.lua -L http://3.110.153.207:8000
 
-wrk -c 50 -t 2 -R 50 -d 15s -s scripts/json.lua -L http://myserverip
+
+wrk -t1 -c10 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t1 -c10 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+
+wrk -t10 -c20 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t10 -c100 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+
+wrk -t100 -c200 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t100 -c700 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t100 -c1000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t100 -c5000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t1000 -c5000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t1000 -c5000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t2000 -c5000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t2000 -c5000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t2000 -c10000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+wrk -t2000 -c15000 -d300s -s scripts.lua -L http://3.110.153.207:8000
+
+cb-stage-rest-alb-1318529999.ap-south-1.elb.amazonaws.com
