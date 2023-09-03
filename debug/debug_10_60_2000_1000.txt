@@ -1,0 +1,28 @@
+starting benchmark...
+spawning thread #0: 10 total client(s). Timing-based test with 0s of warm-up time and 60s of main duration for measurements.
+Warm-up started for thread #0.
+progress: 10% of clients started
+progress: 20% of clients started
+progress: 30% of clients started
+progress: 40% of clients started
+progress: 50% of clients started
+progress: 60% of clients started
+progress: 70% of clients started
+progress: 80% of clients started
+progress: 90% of clients started
+progress: 100% of clients started
+Warm-up phase is over for thread #0.
+Main benchmark duration is started for thread #0.
+Application protocol: http/1.1
+Main benchmark duration is over for thread #0. Stopping all clients.
+Stopped all clients for thread #0
+
+finished in 60.00s, 1335.22 req/s, 444.39KB/s
+requests: 80113 total, 90113 started, 80113 done, 80113 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 80113 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 26.04MB (27303368) total, 15.05MB (15783640) headers (space savings 0.00%), 7.40MB (7756475) data
+                     min         max         mean         sd        +/- sd
+time for request:    44.77ms       8.92s       6.91s       1.35s    90.02%
+time for connect:    50.52ms       2.05s    748.46ms    674.17ms    50.00%
+time to 1st byte:   113.50ms       2.12s    808.95ms    672.77ms    50.00%
+req/s           :     129.46      136.53      133.52        2.26    50.00%
