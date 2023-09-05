@@ -24,6 +24,4 @@ done = function(summary, latency, requests)
       end
    end
    io.write("\t]\n}\n")
-   io.write("#-----------------------------------------------------#")
-   io.close(file)
 end
