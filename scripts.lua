@@ -1,13 +1,13 @@
 
-file = string.format("key=bar&value=quux&serverlogfileName=output_server_%d_%d_%d.log",2000,300,15000)
 wrk.method = "POST"
-wrk.body   = file
-wrk.headers["Content-Type"] = "application/x-www-form-urlencoded"
+wrk.body   = {
+    "key": "rest_client",
+    "value": "rest_value"
+}
+wrk.headers["Content-Type"] = "application/json"
 wrk.path = "/"
 
 done = function(summary, latency, requests)
-   file = io.open("./debug/output.lua", "a")
-   io.output(file)
    io.write("\nJSON Output:\n")
    io.write("{\n")
    io.write(string.format("\t\"requests\": %d,\n", summary.requests))
@@ -17,7 +17,7 @@ done = function(summary, latency, requests)
    io.write(string.format("\t\"bytes_transfer_per_sec\": %0.2f,\n", (summary.bytes/summary.duration)*1e6))
 
    io.write("\t\"latency_distribution\": [\n")
-   for _, p in pairs({ 50, 75, 90, 99, 99.9, 99.99, 99.999, 100 }) do
+   for _, p in pairs({ 50, 90, 99 }) do
       io.write("\t\t{\n")
       n = latency:percentile(p)
       io.write(string.format("\t\t\t\"percentile\": %g,\n\t\t\t\"latency_in_microseconds\": %d\n", p, n))
