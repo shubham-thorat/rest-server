@@ -11,11 +11,8 @@ done = function(summary, latency, requests)
    io.write(string.format("\t\"bytes\": %d,\n", summary.bytes))
    io.write(string.format("\t\"requests_per_sec\": %0.2f,\n", (summary.requests/summary.duration)*1e6))
    io.write(string.format("\t\"bytes_transfer_per_sec\": %0.2f,\n", (summary.bytes/summary.duration)*1e6))
-   
-   local min_latency = math.min(unpack(latencies))
-   local max_latency = math.max(unpack(latencies))
-   io.write(string.format("\t\"minimum_latency\": %0.2f ms,\n", min_latency * 1000))
-   io.write(string.format("\t\"maximum_latency\": %0.2f ms,\n", max_latency * 1000))
+--    io.write(string.format("\t\"minimum_latency_in_microseconds\": %0.2f,\n", latency.min))
+--    io.write(string.format("\t\"maximum_latency_in_microseconds\": %0.2f,\n", latency.max))
 
    io.write("\t\"latency_distribution\": [\n")
    for _, p in pairs({ 50, 90, 99, 99.9}) do
