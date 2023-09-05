@@ -3,7 +3,7 @@ var StatsD = require('node-statsd'),
   client = new StatsD({
     host: 'localhost',
     port: 8125,
-    prefix: 'rest_server.'
+    prefix: 'statsd_metric.'
   });
 
 
