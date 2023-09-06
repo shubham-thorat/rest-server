@@ -511,5 +511,221 @@
 			"latency_in_microseconds": 1729596
 		}
 	]
+},
+{
+	"connections":5000,
+	"threads":100,
+	"requests": 940947,
+	"duration_in_microseconds": 300098519.00,
+	"bytes": 284470205,
+	"requests_per_sec": 3135.46,
+	"bytes_transfer_per_sec": 947922.72,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 3319
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 20306
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 858595
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1729596
+		}
+	]
+},
+{
+	"connections":300,
+	"threads":10,
+	"requests": 156000,
+	"duration_in_microseconds": 120096288.00,
+	"bytes": 53222635,
+	"requests_per_sec": 1298.96,
+	"bytes_transfer_per_sec": 443166.36,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 225285
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 275535
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 383934
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 488718
+		}
+	]
+},
+{
+	"connections":300,
+	"threads":50,
+	"requests": 158400,
+	"duration_in_microseconds": 120089550.00,
+	"bytes": 54042675,
+	"requests_per_sec": 1319.02,
+	"bytes_transfer_per_sec": 450019.80,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 220812
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 269746
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 372152
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 442338
+		}
+	]
+},
+{
+	"connections":3000,
+	"threads":100,
+	"requests": 147927,
+	"duration_in_microseconds": 120096904.00,
+	"bytes": 50463300,
+	"requests_per_sec": 1231.73,
+	"bytes_transfer_per_sec": 420188.18,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 1585183
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 1714820
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 1837005
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1984601
+		}
+	]
+},
+{
+	"connections":2000,
+	"threads":100,
+	"requests": 152566,
+	"duration_in_microseconds": 120096927.00,
+	"bytes": 52161018,
+	"requests_per_sec": 1270.36,
+	"bytes_transfer_per_sec": 434324.34,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 1272842
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 1935496
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 1987812
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1998646
+		}
+	]
+},
+{
+	"connections":700,
+	"threads":10,
+	"requests": 150862,
+	"duration_in_microseconds": 120093621.00,
+	"bytes": 51578115,
+	"requests_per_sec": 1256.20,
+	"bytes_transfer_per_sec": 429482.55,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 545492
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 622939
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 803831
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1196565
+		}
+	]
+},
+{
+	"connections":1000,
+	"threads":10,
+	"requests": 151966,
+	"duration_in_microseconds": 120090709.00,
+	"bytes": 51955640,
+	"requests_per_sec": 1265.43,
+	"bytes_transfer_per_sec": 432636.63,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 786711
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 879355
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 1024566
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1841409
+		}
+	]
+},
+{
+	"connections":2000,
+	"threads":200,
+	"requests": 151295,
+	"duration_in_microseconds": 120100524.00,
+	"bytes": 51725881,
+	"requests_per_sec": 1259.74,
+	"bytes_transfer_per_sec": 430688.22,
+	"latency_distribution": [
+		{
+			"percentile": 50,
+			"latency_in_microseconds": 1521784
+		},
+		{
+			"percentile": 90,
+			"latency_in_microseconds": 1921750
+		},
+		{
+			"percentile": 99,
+			"latency_in_microseconds": 1992139
+		},
+		{
+			"percentile": 99.9,
+			"latency_in_microseconds": 1998738
+		}
+	]
 }
 ]
