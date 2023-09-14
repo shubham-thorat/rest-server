@@ -22,7 +22,6 @@ def convertJSONToArray(index,item):
       return rows
     except Exception as e:
       print("Error while parsing json data : ",e)
-
 def addJSONToExcel(inputJSONFile, outputXlsxFile):
     try:
         jsonFile = open(inputJSONFile)
